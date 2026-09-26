@@ -1,0 +1,6 @@
+mnist_nn
+mnist_nn.exe
+*.dat
+data/
+models/
+*.o
