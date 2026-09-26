@@ -72,6 +72,21 @@ data/
 
 指定した画像の各クラスの確率、予測結果、正解ラベルを表示します。
 
+## 動作確認結果
+
+MNISTの実データを用いて20エポックの学習と推論を確認しています。
+
+- Train samples: 60,000
+- Test samples: 10,000
+- Network: 784 → 50 → ReLU → 100 → ReLU → 10 → Softmax
+- Epochs: 20
+- Batch size: 100
+- Learning rate: 0.01
+- Final train loss: 0.136491
+- Final train accuracy: 96.10%
+- Final test loss: 0.146428
+- Final test accuracy: 95.62%
+
 ## 補足
 
 元の`nn.h`にはMNIST読込み以外の補助コードも含まれていたため、そのまま再配布せず、必要なMNIST読込み処理は`src/mnist_loader.c`として自作し直しています。ニューラルネットワークの計算・逆伝播・学習処理は、元の`6NN.c`を極力維持しています。
